@@ -7,7 +7,7 @@
 <?php
 //print_r($_POST);
 // connect to the database
-$conn=mysqli_connect("localhost", "root", "tiger","registerdb");
+$conn=mysqli_connect("localhost", "root", "","registerdb");
 $conn->query("SET NAMES UTF8");
 if (($_POST["firstname"] <> "") && ($_POST["lastname"] <> "") && ($_POST["age"] <> "") && ($_POST["gender"] <> ""))
 {

@@ -16,9 +16,10 @@ function searchName(str) {
 		if (xmlHttp.readyState == 4) {
 			let res = xmlHttp.responseText.split(',');
 			for(suggest in res){
-				result += "<option value="+res[suggest]+">" + res[suggest] + "</datalist>";
+				result += "<option value="+res[suggest]+">" + res[suggest]+"</option>";
 			}
 			document.getElementById("namesugg").innerHTML = result;
+			//alert(result);
 		}
 	};
 	xmlHttp.send(null);

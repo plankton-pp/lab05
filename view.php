@@ -13,7 +13,7 @@
 	</form>
 	<?php
 	// connect to the database
-	$conn=mysqli_connect("localhost", "root", "tiger","registerdb");
+	$conn=mysqli_connect("localhost", "root", "","registerdb");
 	$conn->query("SET NAMES UTF8");
 	// get results from database
 	if (isset($_GET["search"])&&$_GET["search"]<>"") {

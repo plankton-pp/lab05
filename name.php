@@ -2,7 +2,7 @@
 	$res_text;
 	$name = $_GET["name"];
 	// connect to the database
-	$conn=mysqli_connect("localhost", "root", "tiger","registerdb");
+	$conn=mysqli_connect("localhost", "root", "","registerdb");
 	$conn->query("SET NAMES UTF8");
 	// get results from database
 	$sql="SELECT * FROM Register WHERE FirstName LIKE '%$name%'";
