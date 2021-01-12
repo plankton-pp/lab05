@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Insert Form</title>
+	<script type="text/javascript" src="showAvatar.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function selectPhoto(imgId){
+			document.getElementById("pic").innerHTML = "<img src=\"./avatar/avatar"+imgId+".jpg\">";
+			document.getElementById("hid").value= "./avatar/avatar"+imgId+".jpg";
+		}
+	</script>
+	<Table align="center">
+		<TR>
+		<TD><img src="./avatar/avatar1.jpg" width="45" onclick="selectPhoto(1)"></TD>
+		<TD><img src="./avatar/avatar2.jpg" width="45" onclick="selectPhoto(2)"></TD>
+		<TD><img src="./avatar/avatar3.jpg" width="45" onclick="selectPhoto(3)"></TD>
+		<TD><img src="./avatar/avatar4.jpg" width="45" onclick="selectPhoto(4)"></TD>
+		<TD><img src="./avatar/avatar5.jpg" width="45" onclick="selectPhoto(5)"></TD>
+		<TD><img src="./avatar/avatar6.jpg" width="45" onclick="selectPhoto(6)"></TD>
+		</TR>
+	</Table>
+		<BR>
+		<BR>
+	<Table align="center">
+		<form name="myForm" action="insert.php" method="post" autocomplete="on" enctype="multipart/form-data">
+			<TR><TD id="pic"><img src="./avatar/avatar1.jpg"></TD>
+			<TD id="welcomeText">Welcome...</TD>
+			 <TD><input type="hidden" id="hid" name="avatar" value="./avatar/avatar1.jpg"></TD>
+			</TR>
+			<TR><TD>Nickname:</TD><TD><input type="text" name="nickname" maxlength"10" size="20"onchange="showAvatar(this.value)"></TD></TR>
+			<TR><TD>Firstname:</TD><TD><input type="text" name="firstname" maxlength"10" size="20"></TD></TR>
+			 <TR><TD> Lastname: </TD><TD><input type="text" name="lastname" maxlength="10"
+			size="20"></TD></TR>
+			 <TR><TD> Age: </TD><TD><input type="number" name="age" min="1" max="100"></TD></TR>
+			 <TR><TD>Gender:</TD><TD><select name="gender">
+			<option value="Female">Female</option>
+			<option value="Male">Male</option>
+			 </select></TD></TR>
+			 <TR><TD></TD><TD><BR><input type="submit" name="Save" value="Save">
+			 <input type="reset" name="Cancel" value="Cancel"></TD></TR>
+		</form>
+	</Table>
+</body>
+</html>
