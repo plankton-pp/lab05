@@ -5,7 +5,7 @@
 <body>
 	<?php
 	//Connect to DB
-	$conn=mysqli_connect("localhost", "root", "","RegisterDB");
+	$conn=mysqli_connect("localhost", "root", "tiger","registerdb");
 	$conn->query("SET NAMES UTF8");
 
 	$id = $_GET['id']; // $id is now defined
