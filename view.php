@@ -2,19 +2,18 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>View Register Database</title>
-	<script type="text/javascript" src="showName.js"></script>
 </head>
 <body>
 	<p><a href="insertForm.htm">Add a new record</a></p>
 	<form action="view.php" method="get">
-		<input list="name" name="search" onkeyup="searchName(this.value)">
-		<datalist id="name">
+		<input list="namesugg" name="search" onkeyup="searchName(this.value)">
+		<datalist id="namesugg">
 		</datalist>
 		<input type="submit" value="search">
 	</form>
 	<?php
 	// connect to the database
-	$conn=mysqli_connect("localhost", "root", "","registerdb");
+	$conn=mysqli_connect("localhost", "root", "tiger","registerdb");
 	$conn->query("SET NAMES UTF8");
 	// get results from database
 	if (isset($_GET["search"])&&$_GET["search"]<>"") {
@@ -53,4 +52,5 @@
 	$conn->close(); // close database connection
 	?>
 </body>
+<script type="text/javascript" src="showName.js"></script>
 </html>
